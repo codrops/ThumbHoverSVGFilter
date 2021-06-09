@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Image Hover Effect with SVG Filters | Codrops</title>
+		<meta name="description" content="A simple hover effect for images using SVG filters" />
+		<meta name="keywords" content="frontend, hover, svg filter, image, effect, animation, css, javascript" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/sns2tud.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body>
+		<main>
+			<div class="frame">
+				<h1 class="frame__pagetitle">Image Hover Effect with SVG Filters</h1>
+				<h2 class="frame__title">Hildegard Rost</h2>
+				<nav class="frame__links">
+					<a href="https://tympanus.net/Tutorials/CrosshairDistortion/">Previous demo</a>
+					<a href="https://tympanus.net/codrops/?p=54938">Article</a>
+					<a href="https://github.com/codrops/ThumbHoverSVGFilter/">GitHub</a>
+				</nav>
+			</div>
+			<div class="content">
+				<div class="item">
+					<figure class="thumb">
+						<svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<filter id="distortionFilter" data-type="turbulence">
+								<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp" />
+								<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="250" in="SourceGraphic" />
+							</filter>
+							<image filter="url(#distortionFilter)" class="distort__img" x="50" y="50" xlink:href="img/1.jpg" height="350" width="250"/>
+						</svg>
+						<figcaption class="thumb__caption">
+							<p class="thumb__caption-title">Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.</p>
+							<a class="thumb__caption-link">Explore</a>
+						</figcaption>
+					</figure>
+					<div class="item__meta">
+						<p class="item__meta-counter">01</p>
+						<h3 class="item__meta-title">Custodis</h3>
+						<p class="item__meta-detail">London, UK</p>
+						<p class="item__meta-detail">2019</p>
+					</div>
+				</div>
+				<div class="item">
+					<figure class="thumb">
+						<svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<filter id="distortionFilter2" data-type="turbulence">
+								<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp" />
+								<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="20" in="SourceGraphic" />	
+							</filter>
+							<image filter="url(#distortionFilter2)" class="distort__img" x="50" y="50" xlink:href="img/2.jpg" height="350" width="250"/>
+						</svg>
+						<figcaption class="thumb__caption">
+							<p class="thumb__caption-title">Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.</p>
+							<a class="thumb__caption-link">Explore</a>
+						</figcaption>
+					</figure>
+					<div class="item__meta">
+						<p class="item__meta-counter">02</p>
+						<h3 class="item__meta-title">Lunatia</h3>
+						<p class="item__meta-detail">Madrid, Spain</p>
+						<p class="item__meta-detail">2020</p>
+					</div>
+				</div>
+				<div class="item">
+					<figure class="thumb">
+						<svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<filter id="distortionFilter3" data-type="displacementMap">
+								<feTurbulence type="fractalNoise" baseFrequency="0.01 0.005" numOctaves="5" seed="2" result="noise"/>
+								<feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="B" filterUnits="userSpaceOnUse"/>
+							</filter>
+							<image filter="url(#distortionFilter3)" class="distort__img" x="50" y="50" xlink:href="img/3.jpg" height="350" width="250"/>
+						</svg>
+						<figcaption class="thumb__caption">
+							<p class="thumb__caption-title">Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.</p>
+							<a class="thumb__caption-link">Explore</a>
+						</figcaption>
+					</figure>
+					<div class="item__meta">
+						<p class="item__meta-counter">03</p>
+						<h3 class="item__meta-title">Makkaria</h3>
+						<p class="item__meta-detail">Paris, France</p>
+						<p class="item__meta-detail">2021</p>
+					</div>
+				</div>
+				<div class="item">
+					<figure class="thumb">
+						<svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<filter id="distortionFilter4" data-type="displacementMap">
+								<feTurbulence type="turbulence" baseFrequency="0.07 0.01" numOctaves="5" seed="2" result="noise"/>
+								<feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="B" filterUnits="userSpaceOnUse"/>
+							</filter>
+							<image filter="url(#distortionFilter4)" class="distort__img" x="50" y="50" xlink:href="img/4.jpg" height="350" width="250"/>
+						</svg>
+						<figcaption class="thumb__caption">
+							<p class="thumb__caption-title">Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.</p>
+							<a class="thumb__caption-link">Explore</a>
+						</figcaption>
+					</figure>
+					<div class="item__meta">
+						<p class="item__meta-counter">04</p>
+						<h3 class="item__meta-title">House Friend</h3>
+						<p class="item__meta-detail">Constance, Germany</p>
+						<p class="item__meta-detail">2022</p>
+					</div>
+				</div>
+				<div class="item">
+					<figure class="thumb">
+						<svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<filter id="distortionFilter5" data-type="displacementMap">
+								<feTurbulence type="turbulence" baseFrequency="0.1" numOctaves="5" seed="2" result="noise"/>
+								<feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="B" filterUnits="userSpaceOnUse"/>
+							</filter>
+							<image filter="url(#distortionFilter5)" class="distort__img" x="50" y="50" xlink:href="img/5.jpg" height="350" width="250"/>
+						</svg>
+						<figcaption class="thumb__caption">
+							<p class="thumb__caption-title">Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.</p>
+							<a class="thumb__caption-link">Explore</a>
+						</figcaption>
+					</figure>
+					<div class="item__meta">
+						<p class="item__meta-counter">05</p>
+						<h3 class="item__meta-title">Green Eye</h3>
+						<p class="item__meta-detail">Cape Town, South Africa</p>
+						<p class="item__meta-detail">2023</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<svg class="cursor" width="40" height="40" viewBox="0 0 40 40">
+			<circle class="cursor__inner" cx="20" cy="20" r="10"/>
+		</svg>
+		<script src="js/index.js"></script>
+	</body>
+</html>
